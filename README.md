@@ -2,6 +2,10 @@
 
 A lightweight browser implementation of the classic Snake game, built with plain HTML, CSS, and JavaScript. The project keeps the gameplay loop intentionally focused: grid-based movement, food collection, score tracking, game-over detection, and restart.
 
+## Overview
+
+Serpentine Classic is a small, dependency-free Snake game for the browser. It is designed to stay easy to run, easy to read, and easy to test, with game rules kept separate from DOM rendering.
+
 ## Features
 
 - Classic Snake movement on a fixed grid
@@ -13,11 +17,11 @@ A lightweight browser implementation of the classic Snake game, built with plain
 
 ## Project Structure
 
-- [index.html](/Users/yuanluzhan/Desktop/test/index.html): page shell and UI elements
-- [styles.css](/Users/yuanluzhan/Desktop/test/styles.css): minimal game styling
-- [src/game.js](/Users/yuanluzhan/Desktop/test/src/game.js): pure game logic
-- [src/main.js](/Users/yuanluzhan/Desktop/test/src/main.js): rendering, input handling, and tick loop
-- [tests/game.test.js](/Users/yuanluzhan/Desktop/test/tests/game.test.js): core logic tests for movement, growth, collisions, food placement, and restart
+- `index.html`: page shell and UI elements
+- `styles.css`: minimal game styling
+- `src/game.js`: pure game logic
+- `src/main.js`: rendering, input handling, and tick loop
+- `tests/game.test.js`: core logic tests for movement, growth, collisions, food placement, and restart
 
 ## Getting Started
 
@@ -26,7 +30,7 @@ A lightweight browser implementation of the classic Snake game, built with plain
 Serve the repository root with a simple local server:
 
 ```bash
-cd /Users/yuanluzhan/Desktop/test
+cd /Users/yuanluzhan/Desktop/serpentine-classic
 python3 -m http.server 8000
 ```
 
@@ -64,3 +68,4 @@ This executes the dependency-free logic tests via the built-in Node test runner.
 
 - The project intentionally avoids external dependencies.
 - There is no pause mode in this version; restart is the only session control.
+- The included tests target the core game logic; rendering is intentionally kept thin.

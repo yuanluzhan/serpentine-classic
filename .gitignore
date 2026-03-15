@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node test/runtime artifacts
+node_modules/
+coverage/
+
+# Python local server artifacts
+__pycache__/
+
+# Editor files
+.vscode/
+.idea/
