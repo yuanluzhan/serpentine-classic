@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Classic Snake</p>
+            <h1>Snake</h1>
+          </div>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+
+        <div class="status-bar" aria-live="polite">
+          <p>Score: <span id="score">0</span></p>
+          <p id="status">Use Arrow keys or WASD to move.</p>
+        </div>
+
+        <div
+          id="game-board"
+          class="board"
+          role="grid"
+          aria-label="Snake game board"
+        ></div>
+
+        <div class="controls" aria-label="Touch controls">
+          <button type="button" data-direction="up" aria-label="Move up">Up</button>
+          <div class="controls__row">
+            <button type="button" data-direction="left" aria-label="Move left">Left</button>
+            <button type="button" data-direction="down" aria-label="Move down">Down</button>
+            <button type="button" data-direction="right" aria-label="Move right">Right</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

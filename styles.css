@@ -1,0 +1,169 @@
+:root {
+  --bg: #f4efe6;
+  --panel: #fffdf8;
+  --panel-border: #d7ccbb;
+  --text: #2b241c;
+  --muted: #726456;
+  --board: #efe7da;
+  --cell: #e4d8c6;
+  --snake: #3f7d4b;
+  --snake-head: #275732;
+  --food: #b54934;
+  --button: #f8f2e8;
+  --button-border: #c8b9a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #f8f3eb 0%, var(--bg) 100%);
+  color: var(--text);
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  width: min(100%, 540px);
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(67, 49, 26, 0.08);
+}
+
+.panel__header,
+.status-bar,
+.controls__row {
+  display: flex;
+  align-items: center;
+}
+
+.panel__header,
+.status-bar {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.status-bar {
+  margin: 18px 0 16px;
+  flex-wrap: wrap;
+}
+
+.status-bar p {
+  margin: 0;
+}
+
+.board {
+  display: grid;
+  gap: 2px;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  padding: 10px;
+  background: var(--board);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  touch-action: none;
+}
+
+.cell {
+  background: var(--cell);
+  border-radius: 4px;
+}
+
+.cell--snake {
+  background: var(--snake);
+}
+
+.cell--head {
+  background: var(--snake-head);
+}
+
+.cell--food {
+  background: var(--food);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: var(--button);
+  border: 1px solid var(--button-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f2e8d9;
+}
+
+button:focus-visible {
+  outline: 2px solid #7a9d7d;
+  outline-offset: 2px;
+}
+
+.controls {
+  margin-top: 18px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.controls__row {
+  gap: 10px;
+}
+
+.controls button {
+  min-width: 78px;
+}
+
+@media (max-width: 560px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .panel__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .board {
+    width: 100%;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .controls__row {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .controls button {
+    flex: 1;
+  }
+}
